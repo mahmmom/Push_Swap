@@ -6,11 +6,12 @@
 /*   By: mohamoha <mohamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 20:42:54 by mohamoha          #+#    #+#             */
-/*   Updated: 2023/12/20 18:17:39 by mohamoha         ###   ########.fr       */
+/*   Updated: 2025/01/15 19:40:41 by mohamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
 static void	free_stack(t_stack *a, t_stack *b)
 {
@@ -42,6 +43,8 @@ int	main(int ac, char **av)
 		else
 			radix_sort(&a, &b);
 	}
+	if(sorted(a))
+		printf("Correct\n");
 	free_stack(a, b);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: mohamoha <mohamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 16:25:50 by mohamoha          #+#    #+#             */
-/*   Updated: 2025/01/15 19:16:21 by mohamoha         ###   ########.fr       */
+/*   Updated: 2025/01/15 19:39:05 by mohamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	get_max_bits(t_stack *stack)
 	while (stack)
 	{
 		num_bits = 0;
-		num = stack->content;
+		num = stack->index;
 		if (num < 0)
 			num *= -1;
 		while (num > 0)
