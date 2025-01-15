@@ -6,7 +6,7 @@
 /*   By: mohamoha <mohamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 20:43:25 by mohamoha          #+#    #+#             */
-/*   Updated: 2023/12/12 21:11:55 by mohamoha         ###   ########.fr       */
+/*   Updated: 2025/01/15 21:12:25 by mohamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int	ft_atol(char *str, int *flag)
 	return (number * sign);
 }
 
+
 char	**parse_args(int arg_count, char **args)
 {
 	int		i;
@@ -48,9 +49,11 @@ char	**parse_args(int arg_count, char **args)
 	char	*tmp;
 	char	**split;
 
-	if (!arg_count || !args)
-		ft_putstr_fd(ERROR_ARGS, 2);
+	if (!arg_count || !args || !*args)
+		return(ft_putstr_fd(ERROR_ARGS, 2), NULL);
 	i = 1;
+	if (!check_empty(args))
+		return(ft_putstr_fd(ERROR_ARGS, 2), NULL);
 	arg = ft_strjoin(args[i++], " ");
 	while (args[i])
 	{

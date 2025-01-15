@@ -6,7 +6,7 @@
 /*   By: mohamoha <mohamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 20:43:43 by mohamoha          #+#    #+#             */
-/*   Updated: 2024/02/25 21:55:34 by mohamoha         ###   ########.fr       */
+/*   Updated: 2025/01/15 21:12:13 by mohamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ t_stack				*find_min_2(t_stack **stack);
 /*
 Helping Functions
 */
+int		check_empty(char **str);
 
 /* stack utils  */
 t_stack				*ft_stack_new(int content);

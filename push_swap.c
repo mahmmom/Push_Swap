@@ -6,7 +6,7 @@
 /*   By: mohamoha <mohamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 20:42:54 by mohamoha          #+#    #+#             */
-/*   Updated: 2025/01/15 19:40:41 by mohamoha         ###   ########.fr       */
+/*   Updated: 2025/01/15 21:13:57 by mohamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int	main(int ac, char **av)
 	a = NULL;
 	b = NULL;
 	av = parse_args(ac - 1, av);
+	if(!av)
+		return (1);
 	ft_init_stack(&a, av);
 	if (!sorted(a))
 	{
@@ -43,8 +45,6 @@ int	main(int ac, char **av)
 		else
 			radix_sort(&a, &b);
 	}
-	if(sorted(a))
-		printf("Correct\n");
 	free_stack(a, b);
 	return (0);
 }
